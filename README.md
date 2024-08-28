@@ -44,7 +44,7 @@ Ex3:
         npm install @mui/material @mui/styled-engine-sc styled-components
         npm install @mui/icons-material
 
-DATE 2 28/08/2024
+DATE 2 29/08/2024
     search:
         fonts.google.com -> Choose Lato font -> get font -> get embed code -> import -> copy to app.css
 

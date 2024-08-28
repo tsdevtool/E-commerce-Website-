@@ -1,6 +1,9 @@
-import Button from '@mui/material/Button';
+import { Button } from "@mui/material";
+import { IoIosSearch } from "react-icons/io";
 import { Link } from 'react-router-dom';
-import Logo from '../../assets/images/logo.jpg';
+import Logo from '../../assets/images/logo.png';
+import CountryDropdown from '../ContryDropdown';
+
 const Header =()=>{
 
     return(
@@ -12,22 +15,29 @@ const Header =()=>{
                     </div>
                 </div>
 
-                <div className="header">
+                <header className="header">
                     <div className="container">
                         <div className="row">
-                            <div className="logoWrapper align-items-center col-sm-2">
+                            <div className="logoWrapper d-flex align-items-center col-sm-2">
                                 <Link to={"/"}><img src={Logo} alt="Logo"></img></Link>
                                 {/* <Link to={"/"}><img src={Logo} alt="Logo"></img></Link> */}
                             </div>
 
                             <div className='col-sm-10 d-flex align-items-center part2'>
-                                <Button className="countryDrop">
-                                    Your Location
-                                </Button>
+                                <CountryDropdown/>
+                                
+
+                                {/*Header Search Start Here*/}
+                                <div className='headerSearch ml-3 mr-3'>
+                                    <input type='text' placeholder="Search for products..."/>
+                                    <Button><IoIosSearch/></Button>
+                                </div>
+
+                                {/*Header Search Ends Here*/}
                             </div>
                         </div>
                     </div>
-                </div>
+                </header>
 
             </div>
         </>
