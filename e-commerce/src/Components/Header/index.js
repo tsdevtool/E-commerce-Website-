@@ -1,8 +1,11 @@
 import { Button } from "@mui/material";
+import { FiUser } from "react-icons/fi";
 import { IoIosSearch } from "react-icons/io";
+import { IoBagOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png';
 import CountryDropdown from '../ContryDropdown';
+
 
 const Header =()=>{
 
@@ -34,6 +37,19 @@ const Header =()=>{
                                 </div>
 
                                 {/*Header Search Ends Here*/}
+                                <div className="part3 d-flex align-items-center ml-auto">
+                                    <Button className="circle mr-3"><FiUser />
+                                    </Button>
+                                    <div className="ml-auto cartTab">
+                                        <span className="price">$ 3.29</span>
+                                        <div className="position-position-relative ml-2">
+                                            <Button className="circle "><IoBagOutline />
+                                            </Button>
+                                            <span className="count d-flex align-items-center
+                                            justify-content-center">1</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
