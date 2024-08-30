@@ -44,6 +44,14 @@ Ex3:
         npm install @mui/material @mui/styled-engine-sc styled-components
         npm install @mui/icons-material
 
-Create API
+DATE 2 29/08/2024
+    search:
+        fonts.google.com -> Choose Lato font -> get font -> get embed code -> import -> copy to app.css
+
+        photopea.com
+
+DATE 3 30/08/2024
+    S
+
 
 
