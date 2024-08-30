@@ -18,6 +18,7 @@ const Header =()=>{
                     </div>
                 </div>
 
+                {/* <p className="text-primary">Nguyen Thanh Sieu</p> */}
                 <header className="header">
                     <div className="container">
                         <div className="row">
@@ -40,9 +41,9 @@ const Header =()=>{
                                 <div className="part3 d-flex align-items-center ml-auto">
                                     <Button className="circle mr-3"><FiUser />
                                     </Button>
-                                    <div className="ml-auto cartTab">
+                                    <div className="ml-auto cartTab d-flex align-items-center">
                                         <span className="price">$ 3.29</span>
-                                        <div className="position-position-relative ml-2">
+                                        <div className="position-relative ml-2">
                                             <Button className="circle "><IoBagOutline />
                                             </Button>
                                             <span className="count d-flex align-items-center
