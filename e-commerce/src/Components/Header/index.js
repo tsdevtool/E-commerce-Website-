@@ -1,10 +1,11 @@
 import { Button } from "@mui/material";
 import { FiUser } from "react-icons/fi";
-import { IoIosSearch } from "react-icons/io";
 import { IoBagOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/logo.png';
 import CountryDropdown from '../ContryDropdown';
+import Navigation from "./Navigation";
+import SearchBox from "./SearchBox";
 
 
 const Header =()=>{
@@ -32,10 +33,7 @@ const Header =()=>{
                                 
 
                                 {/*Header Search Start Here*/}
-                                <div className='headerSearch ml-3 mr-3'>
-                                    <input type='text' placeholder="Search for products..."/>
-                                    <Button><IoIosSearch/></Button>
-                                </div>
+                                <SearchBox/>
 
                                 {/*Header Search Ends Here*/}
                                 <div className="part3 d-flex align-items-center ml-auto">
@@ -55,6 +53,8 @@ const Header =()=>{
                         </div>
                     </div>
                 </header>
+
+              <Navigation/>
 
             </div>
         </>
