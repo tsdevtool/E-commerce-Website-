@@ -1,7 +1,9 @@
 import { Button } from "@mui/material";
+import { useContext } from "react";
 import { FiUser } from "react-icons/fi";
 import { IoBagOutline } from "react-icons/io5";
 import { Link } from 'react-router-dom';
+import { MyContext } from "../../App";
 import Logo from '../../assets/images/logo.png';
 import CountryDropdown from '../ContryDropdown';
 import Navigation from "./Navigation";
@@ -9,6 +11,8 @@ import SearchBox from "./SearchBox";
 
 
 const Header =()=>{
+
+    const context = useContext(MyContext)
 
     return(
         <>
@@ -29,7 +33,10 @@ const Header =()=>{
                             </div>
 
                             <div className='col-sm-10 d-flex align-items-center part2'>
-                                <CountryDropdown/>
+                                {
+                                    context.countryList.length!==0 &&<CountryDropdown/>
+                                }
+                                {/* <CountryDropdown/>/ */}
                                 
 
                                 {/*Header Search Start Here*/}

@@ -1,9 +1,10 @@
 import { Button } from "@mui/material";
 import Dialog from '@mui/material/Dialog';
 import Slide from '@mui/material/Slide';
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { FaAngleDown } from "react-icons/fa6";
 import { IoIosSearch, IoMdClose, IoMdTrendingUp } from "react-icons/io";
+import { MyContext } from "../../App";
 
 
 const Transition = React.forwardRef(function Transition(props,ref) {
@@ -12,13 +13,40 @@ const Transition = React.forwardRef(function Transition(props,ref) {
 
 const CountryDropdown =()=>{
     const [isOpenModal, setisOpenModal] = useState(false);
+    const [selectedTab, setSelectedTab] =  useState(null)
+    const[countryList, setCountryList] = useState([])
+    const context = useContext(MyContext)
+    const selectCountry=(index, country)=>{
+        setSelectedTab(index)
+        setisOpenModal(false)
+        context.setSelectedCountry(country)
+    }
 
+    useEffect(()=>{
+        setCountryList(context.countryList)
+    },[])
+    const filterList=(e)=>{
+        const keyword = e.target.value.toLowerCase()
+
+        if(keyword!==""){
+            const list = countryList.filter((item)=>{
+                return item.country.toLowerCase().includes(keyword)
+                
+            })
+            setCountryList(list)
+        }else{
+            setCountryList(context.countryList)
+        }
+        
+
+        
+    }
     return(
         <>
             <Button className="countryDrop" onClick={()=>setisOpenModal(IoMdTrendingUp)}>
                 <div className='info d-flex flex-column'>
                     <span className="label">Your Location</span>
-                    <span className="name">India</span>
+                    <span className="name">{context.selectedCountry!=="" ? context.selectedCountry.length>10? context.selectedCountry?.substr(0,10)+"..." : context.selectedCountry: "Select Location"}</span>
                 </div>
                 <span className="ml-auto"><FaAngleDown/></span>
             </Button>
@@ -29,26 +57,20 @@ const CountryDropdown =()=>{
                 <p>Enter your address and we will specify the offer for your area.</p>
                 <Button className="close_" onClick={()=>setisOpenModal(false)}><IoMdClose /></Button>
                 <div className='headerSearch w-100'>
-                    <input type='text' placeholder="Search your area..."/>
+                    <input type='text' placeholder="Search your area..." onChange={filterList}/>
                     <Button><IoIosSearch/></Button>
                 </div>
 
                 <ul className="countryList mt-3">
-                    <li><Button onClick={()=>setisOpenModal(false)}>Viet Nam</Button></li>
-                    <li><Button onClick={()=>setisOpenModal(false)}>Ha Noi</Button></li>
-                    <li><Button onClick={()=>setisOpenModal(false)}>Ho Chi Minh City</Button></li>
-                    <li><Button onClick={()=>setisOpenModal(false)}>Da Nang</Button></li>
-                    <li><Button onClick={()=>setisOpenModal(false)}>Hai Phong</Button></li>
-                    <li><Button onClick={()=>setisOpenModal(false)}>Can Tho</Button></li>
-                    <li><Button onClick={()=>setisOpenModal(false)}>Binh Duong</Button></li>
-                    <li><Button onClick={()=>setisOpenModal(false)}>Ba Ria - Vung Tau</Button></li>
-                    <li><Button onClick={()=>setisOpenModal(false)}>Dong Nai</Button></li>
-                    <li><Button onClick={()=>setisOpenModal(false)}>Binh Dinh</Button></li>
-                    <li><Button onClick={()=>setisOpenModal(false)}>Vinh Long</Button></li>
-                    <li><Button onClick={()=>setisOpenModal(false)}>Khanh Hoa</Button></li>
-                    <li><Button onClick={()=>setisOpenModal(false)}>Nam Dinh</Button></li>
-                    <li><Button onClick={()=>setisOpenModal(false)}>Ca Mau</Button></li>
-                    <li><Button onClick={()=>setisOpenModal(false)}>Nghe An</Button></li>
+                {
+                    countryList?.length!==0 && countryList?.map((item, index)=>{
+                        return(
+                            <li key={index}><Button onClick={()=>selectCountry(index, item.country)}
+                            className={`${selectedTab === index ? 'active' : ''}`}>{item.country}</Button></li>
+                        )
+                    })
+                }
+                    
                     
 
                 </ul>
