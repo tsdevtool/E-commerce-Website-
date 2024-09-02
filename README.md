@@ -47,3 +47,9 @@ search:
 fonts.google.com -> Choose Lato font -> get font -> get embed code -> import -> copy to app.css
 
         photopea.com
+
+EX7:
+API:
+https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=27dad2d0abd34a22965727ce8d939077
+
+https://countriesnow.space/api/v0.1/countries/

@@ -33,6 +33,8 @@ body{
   max-width: 90%;
 } */
 
+.headerWrapper{border-bottom: 1px solid rgba(0, 0, 0, 0.1); padding-bottom: 10px;}
+
 .headerWrapper .top-strip{padding: 8px 0px;}
 .headerWrapper .top-strip p {color: #fff; font-size: 12px; font-weight:500;}
 
@@ -154,6 +156,14 @@ header .part3 .circle sgv{font-size: 22px;}
   color: #000;
   justify-content: flex-start !important;
   padding: 10px 20px !important;
+}
+
+.locationModal .countryList li button:hover{
+  background: #f1f1f1;
+}
+
+.locationModal .countryList li button.active{
+  background: #e2e2e2 !important;
 }
 
 .locationModal .close_{
