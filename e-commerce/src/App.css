@@ -33,7 +33,7 @@ body{
   max-width: 90%;
 } */
 
-.headerWrapper{border-bottom: 1px solid rgba(0, 0, 0, 0.1); padding-bottom: 10px;}
+.headerWrapper{border-bottom: 1px solid rgba(0, 0, 0, 0.1);}
 
 .headerWrapper .top-strip{padding: 8px 0px;}
 .headerWrapper .top-strip p {color: #fff; font-size: 12px; font-weight:500;}
@@ -187,6 +187,47 @@ nav .navPart1{
   flex: 0 0 20%;
 }
 
+nav .navPart1 .catWrapper{
+  position: relative;
+}
+
+nav .navPart1 .catWrapper .sidebarNav{
+  width: 100%;
+  height: 0px;
+  opacity: 0;
+  position: absolute;
+  left: 0px;
+  top: 114%;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 15px 0px;
+  visibility: hidden;
+  transition: all  0.2;
+  
+}
+
+nav .navPart1 .catWrapper .sidebarNav.open{
+  height: auto;
+  opacity: 1;
+  visibility: inherit;
+}
+
+nav .navPart1 .catWrapper .sidebarNav ul li{
+ width: 100%;
+ list-style: none;
+ padding:   0px 15px;
+}
+
+nav .navPart1 .catWrapper .sidebarNav ul li button{
+  color: #000 !important;
+  width: 100%;
+  justify-content: flex-start;
+  text-transform: capitalize;
+}
+nav .navPart1 .catWrapper .sidebarNav ul li button:hover{
+  background: transparent !important;
+}
+
 nav .navPart2{
   max-width: 80%;
   flex: 0 0 80%;
@@ -221,6 +262,10 @@ nav .navPart2 ul{
   margin-bottom: 0px;
 }
 
+nav .navPart2 ul li{
+  padding-bottom: 10px;
+}
+
 nav .navPart2 ul li a{
   text-decoration: none;
 }
@@ -245,4 +290,42 @@ nav .navPart2 ul li a button:hover{
 
 nav .navPart2 ul li a svg{
   font-size: 15px;
+}
+
+nav .navPart2 ul li{
+  position: relative;
+}
+
+nav .navPart2 ul li .submenu{
+  position: absolute;
+  top: 150%;
+  left: 0px;
+  min-width: 200px;
+  background: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.15 ease-in-out;
+}
+
+nav .navPart2 ul li:hover .submenu{
+  opacity: 1;
+  visibility: inherit;
+  top: 100%;
+}
+
+nav .navPart2 ul li .submenu a{
+  display: block;
+  width: 100%;
+}
+
+nav .navPart2 ul li .submenu a button{
+  width: 100%;
+  border-radius: 0px !important;
+  justify-content: flex-start !important;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+nav.navPart2 ul li .submenu a button:hover{
+  background: #f1f1f1 !important;
 }

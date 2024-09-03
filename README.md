@@ -53,3 +53,7 @@ API:
 https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=27dad2d0abd34a22965727ce8d939077
 
 https://countriesnow.space/api/v0.1/countries/
+
+EX8:
+reference source:https://www.shoppersstop.com/ server: India
+box shadow css3 codepen
