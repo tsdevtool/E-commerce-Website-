@@ -56,4 +56,9 @@ https://countriesnow.space/api/v0.1/countries/
 
 EX8:
 reference source:https://www.shoppersstop.com/ server: India
-box shadow css3 codepen
+box shadow css3
+
+slick slider npm:https://www.npmjs.com/package/react-slick
+https://digitalapache.com/: view-source:https://digitalapache.com/ -> copy <link rel="stylesheet" href="https://digitalapache.com/wp-content/themes/digi/assets/css/font-awesome.min.css">
+
+font awesome v4:https://fontawesome.com/v4/icons/ ->search arrow

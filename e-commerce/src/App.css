@@ -3,6 +3,9 @@
   padding:  0px;
 }
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+
 
 body{
   font-family: "Lato", sans-serif;
@@ -203,7 +206,7 @@ nav .navPart1 .catWrapper .sidebarNav{
   padding: 15px 0px;
   visibility: hidden;
   transition: all  0.2;
-  
+  z-index: 100;
 }
 
 nav .navPart1 .catWrapper .sidebarNav.open{
@@ -305,6 +308,7 @@ nav .navPart2 ul li .submenu{
   opacity: 0;
   visibility: hidden;
   transition: all 0.15 ease-in-out;
+  z-index: 100;
 }
 
 nav .navPart2 ul li:hover .submenu{
@@ -329,3 +333,34 @@ nav .navPart2 ul li .submenu a button{
 nav.navPart2 ul li .submenu a button:hover{
   background: #f1f1f1 !important;
 }
+
+
+/* Home Banner */
+.homeBannerSection{
+  position: relative;
+  overflow: hidden; /* An cham tron o duoi*/
+}
+
+.homeBannerSection *{outline: none !important;}
+
+.homeBannerSection .slick-arrow{
+  position: absolute;
+  top: 45%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Hien thi nut next prev trong banner o phan ke tiep nua */
+  background:#444444;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 100%;
+  font-family: FontAwesome !important;
+  font-weight: bold;
+}
+
+.homeBannerSection .slick-arrow.slick-next{right: 25px !important;}
+.homeBannerSection .slick-arrow.slick-prev{left: 25px !important;}
+
+.homeBannerSection .slick-arrow.slick-next::before{color:#fff; font-family: FontAwesome !important;}
+.homeBannerSection .slick-arrow.slick-prev::before{color:#fff; font-family: FontAwesome !important;}

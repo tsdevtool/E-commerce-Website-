@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Navigation =()=>{
 
-    const [isOpenSidebarNav, setIsOpenSidebarNav] = useState(true);
+    const [isOpenSidebarNav, setIsOpenSidebarNav] = useState(false);
     
     return(
         <nav>
