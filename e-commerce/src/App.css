@@ -9,12 +9,27 @@
 
 body{
   font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0,0.8);
 }
 
 @media (min-width:1300px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl{
     max-width: 1200px;
   }
+}
+
+
+.cursor{
+  cursor: pointer;
+}
+
+.text-light{
+  color: #8b8b8b !important;
+}
+
+.text-sml{
+  font-size: 14px;
 }
 
 
@@ -335,6 +350,46 @@ nav.navPart2 ul li .submenu a button:hover{
 }
 
 
+/* Sidebar item */
+
+nav .navPart1 .catWrapper .sidebarNav ul li{
+  position: static;
+  
+}
+
+nav .navPart1 .catWrapper .sidebarNav ul li .submenu{
+  position: absolute;
+  top: 0px;
+  left: 101%;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+nav .navPart1 .catWrapper .sidebarNav ul li .submenu button{
+  border-radius: 0px !important;
+}
+nav .navPart1 .catWrapper .sidebarNav ul li  button svg{
+  font-size: 13px;
+  /* Chinh do trong suot */
+  opacity: 0.6;
+}
+
+nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu{
+  opacity: 1;
+  visibility: inherit;
+  left: 100%;
+}
+
+
+
+
 /* Home Banner */
 .homeBannerSection{
   position: relative;
@@ -364,3 +419,31 @@ nav.navPart2 ul li .submenu a button:hover{
 
 .homeBannerSection .slick-arrow.slick-next::before{color:#fff; font-family: FontAwesome !important;}
 .homeBannerSection .slick-arrow.slick-prev::before{color:#fff; font-family: FontAwesome !important;}
+
+.homeBannerSection{cursor: pointer;}
+
+.homeProducts{
+  padding: 25px 0px;
+  width: 100%;
+}
+
+.homeProducts .banner{
+  width: 100%;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.productRow .hd{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.viewAllBtn{padding: 8px 25px !important; background: #fff; border:  1px solid rgba(0, 0, 0, 0.1) !important; border-radius: 30px !important; color: #000 !important; font-weight: 600; text-transform: capitalize !important;}
+.viewAllBtn svg{font-size: 20px;}
+
+.productItem{
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+}

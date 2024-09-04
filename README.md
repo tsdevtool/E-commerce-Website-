@@ -62,3 +62,6 @@ slick slider npm:https://www.npmjs.com/package/react-slick
 https://digitalapache.com/: view-source:https://digitalapache.com/ -> copy <link rel="stylesheet" href="https://digitalapache.com/wp-content/themes/digi/assets/css/font-awesome.min.css">
 
 font awesome v4:https://fontawesome.com/v4/icons/ ->search arrow
+
+EX9:
+swipper slider react: https://swiperjs.com/react -> Resource->Demo->choose it which you like and choose react
