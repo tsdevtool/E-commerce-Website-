@@ -9,12 +9,27 @@
 
 body{
   font-family: "Lato", sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0,0.8);
 }
 
 @media (min-width:1300px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl{
     max-width: 1200px;
   }
+}
+
+
+.cursor{
+  cursor: pointer;
+}
+
+.text-light{
+  color: #8b8b8b !important;
+}
+
+.text-sml{
+  font-size: 14px;
 }
 
 
@@ -335,6 +350,46 @@ nav.navPart2 ul li .submenu a button:hover{
 }
 
 
+/* Sidebar item */
+
+nav .navPart1 .catWrapper .sidebarNav ul li{
+  position: static;
+  
+}
+
+nav .navPart1 .catWrapper .sidebarNav ul li .submenu{
+  position: absolute;
+  top: 0px;
+  left: 101%;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+nav .navPart1 .catWrapper .sidebarNav ul li .submenu button{
+  border-radius: 0px !important;
+}
+nav .navPart1 .catWrapper .sidebarNav ul li  button svg{
+  font-size: 13px;
+  /* Chinh do trong suot */
+  opacity: 0.6;
+}
+
+nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu{
+  opacity: 1;
+  visibility: inherit;
+  left: 100%;
+}
+
+
+
+
 /* Home Banner */
 .homeBannerSection{
   position: relative;
@@ -357,6 +412,7 @@ nav.navPart2 ul li .submenu a button:hover{
   border-radius: 100%;
   font-family: FontAwesome !important;
   font-weight: bold;
+  box-shadow: 0 1px 3px rgb(0, 0, 0 / 12%), 0 1px 2px rgb(0, 0, 0 / 24%) !important;
 }
 
 .homeBannerSection .slick-arrow.slick-next{right: 25px !important;}
@@ -364,3 +420,137 @@ nav.navPart2 ul li .submenu a button:hover{
 
 .homeBannerSection .slick-arrow.slick-next::before{color:#fff; font-family: FontAwesome !important;}
 .homeBannerSection .slick-arrow.slick-prev::before{color:#fff; font-family: FontAwesome !important;}
+
+.homeBannerSection{cursor: pointer;}
+
+.homeProducts{
+  padding: 25px 0px;
+  width: 100%;
+}
+
+.homeProducts .banner{
+  width: 100%;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.productRow .hd{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.viewAllBtn{padding: 8px 25px !important; background: #fff; border:  1px solid rgba(0, 0, 0, 0.1) !important; border-radius: 30px !important; color: #000 !important; font-weight: 600; text-transform: capitalize !important;}
+.viewAllBtn svg{font-size: 20px;}
+
+.productItem{
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.productItem .badge{
+  display: inline-block;
+  padding: 7px 10px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+}
+
+.badge-primary{
+  background: #2bbef9 !important;
+}
+
+
+.productItem .info{
+  padding: 15px;
+  cursor: pointer;
+}
+
+.productItem .info h4{
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+.productItem .actions{
+  position: absolute;
+  top: 20px;
+  right: -100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: all 0.5s ease-in-out;
+}
+
+.productItem .imgWrapper{
+  overflow: hidden;
+}
+
+
+.productItem .imgWrapper img{
+  transition: all 0.3s ease-in-out;
+}
+
+.productItem .imgWrapper:hover img{
+  transform: scale(1.1);
+}
+
+.productItem .imgWrapper:hover .actions{
+  opacity: 1;
+  right: 10px;
+
+}
+
+.productItem .actions button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px !important;
+  height: 40px !important;
+  width: 40px !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 50% !important;
+  background: #fff;
+  box-shadow: 0 1px 3px rgb(0, 0, 0 / 12%), 0 1px 2px rgb(0, 0, 0 / 24%) !important;
+  transition: all 0.0s !important;
+}
+
+.productItem .actions button:hover{
+  background: #233a95 !important;
+}
+
+.productItem .actions button svg{
+  color: #000 !important;
+  opacity: 0.7;
+  pointer-events: none;
+  font-size: 15px;
+}
+
+.productItem .actions button svg:hover{
+  color: #fff !important;
+}
+
+.productItem .info .oldPrice{
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.2);
+  text-decoration: line-through;
+}
+
+.productItem .info .newPrice{
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product_row .productItem{
+  border-right: 1px solid transparent !important;
+}
+
+.product_row .swiper-slide:last-child .productItem{
+  border-right: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.swiper{padding-right: 1px !important;}
