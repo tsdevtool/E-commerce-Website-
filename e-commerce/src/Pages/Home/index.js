@@ -1,13 +1,14 @@
 import { Button } from "@mui/material";
 import { IoMdArrowForward } from "react-icons/io";
-import { Swiper, SwiperSlide } from "swiper/react";
-import HomeBanner from "../../Components/HomeBanner";
-import banner1 from "../../assets/images/banner1.png";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import HomeBanner from "../../Components/HomeBanner";
+import banner1 from "../../assets/images/banner1.png";
+import banner2 from "../../assets/images/banner2.jpg";
 
+import HomeCat from "../../Components/HomeCat";
 import ProductItem from "../../Components/ProductItem/productItem";
 
 const Home = () => {
@@ -22,12 +23,17 @@ const Home = () => {
   return (
     <>
       <HomeBanner />
+      <HomeCat />
       <section className="homeProducts">
         <div className="container">
           <div className="row">
             <div className="col-md-3">
               <div className="banner">
                 <img src={banner1} className="cursor w-100" />
+              </div>
+
+              <div className="banne mt-4">
+                <img src={banner2} className="cursor w-100 mt-4" />
               </div>
             </div>
             <div className="col-md-9 productRow">

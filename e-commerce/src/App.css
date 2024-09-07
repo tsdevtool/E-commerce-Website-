@@ -554,3 +554,9 @@ nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu{
 }
 
 .swiper{padding-right: 1px !important;}
+
+/* Home Cat */
+.homeCat{padding: 35px 0px;}
+.homeCat .swiper .item{padding: 15px; width: 100%; height: auto; background-color: #feefea; border-radius: 8px;}
+
+.homeCat .swiper .item img{width: 80%;}
