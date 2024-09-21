@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import { IoMdArrowForward } from "react-icons/io";
+import { IoMailOutline } from "react-icons/io5";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
@@ -9,6 +10,7 @@ import banner1 from "../../assets/images/banner1.png";
 import banner2 from "../../assets/images/banner2.jpg";
 import banner3 from "../../assets/images/banner3.jpg";
 import banner4 from "../../assets/images/banner4.jpg";
+import newsLetterImg from "../../assets/images/coupon.webp";
 
 import HomeCat from "../../Components/HomeCat";
 import ProductItem from "../../Components/ProductItem/productItem";
@@ -140,6 +142,32 @@ const Home = () => {
                   <img src={banner7} className="cursor w-100" />
                 </div> */}
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="newsLetterSection mt-3 mb-3 d-flex align-items-center">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6">
+              <p className="text-white mb-1">
+                $20 discount for your first order
+              </p>
+              <h4 className="text-white">Join our newsletter and get ...</h4>
+              <p className="text-light">
+                Join our email subscription now to get updates on
+                <br />
+                promotions and coupons.
+              </p>
+              <form>
+                <IoMailOutline />
+                <input type="text" placeholder="Your Email Address" />
+                <Button>Subscribe</Button>
+              </form>
+            </div>
+            <div className="col-md-6">
+              <img src={newsLetterImg} />
             </div>
           </div>
         </div>
