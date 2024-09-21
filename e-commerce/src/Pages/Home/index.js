@@ -1,13 +1,16 @@
 import { Button } from "@mui/material";
 import { IoMdArrowForward } from "react-icons/io";
-import { Swiper, SwiperSlide } from "swiper/react";
-import HomeBanner from "../../Components/HomeBanner";
-import banner1 from "../../assets/images/banner1.png";
-
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import HomeBanner from "../../Components/HomeBanner";
+import banner1 from "../../assets/images/banner1.png";
+import banner2 from "../../assets/images/banner2.jpg";
+import banner3 from "../../assets/images/banner3.jpg";
+import banner4 from "../../assets/images/banner4.jpg";
 
+import HomeCat from "../../Components/HomeCat";
 import ProductItem from "../../Components/ProductItem/productItem";
 
 const Home = () => {
@@ -22,12 +25,19 @@ const Home = () => {
   return (
     <>
       <HomeBanner />
+      <HomeCat />
       <section className="homeProducts">
         <div className="container">
           <div className="row">
             <div className="col-md-3">
-              <div className="banner">
-                <img src={banner1} className="cursor w-100" />
+              <div className="sticky">
+                <div className="banner">
+                  <img src={banner1} className="cursor w-100" />
+                </div>
+
+                <div className="banner mt-4">
+                  <img src={banner2} className="cursor w-100 mt-4" />
+                </div>
               </div>
             </div>
             <div className="col-md-9 productRow">
@@ -49,9 +59,8 @@ const Home = () => {
                 <Swiper
                   slidesPerView={4}
                   spaceBetween={0}
-                  pagination={{
-                    clickable: true,
-                  }}
+                  navigation={true}
+                  slidesPerGroup={3}
                   modules={[Navigation]}
                   className="mySwiper"
                 >
@@ -101,44 +110,35 @@ const Home = () => {
               </div>
 
               {/* product best seller */}
-              <div className="product_row w-100 mt-4">
-                <Swiper
-                  slidesPerView={4}
-                  spaceBetween={0}
-                  pagination={{
-                    clickable: true,
-                  }}
-                  modules={[Navigation]}
-                  className="mySwiper"
-                >
-                  <SwiperSlide>
-                    <ProductItem />
-                  </SwiperSlide>
+              <div className="product_row productRow2 w-100 mt-4 d-flex">
+                <ProductItem />
+                <ProductItem />
+                <ProductItem />
+                <ProductItem />
+                <ProductItem />
+                <ProductItem />
+                <ProductItem />
+                <ProductItem />
+                <ProductItem />
+                <ProductItem />
+              </div>
 
-                  <SwiperSlide>
-                    <ProductItem />
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <ProductItem />
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <ProductItem />
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <ProductItem />
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <ProductItem />
-                  </SwiperSlide>
-
-                  <SwiperSlide>
-                    <ProductItem />
-                  </SwiperSlide>
-                </Swiper>
+              <div className="d-flex mt-4 mb-5 bannerSec">
+                <div className="banner ">
+                  <img src={banner3} className="cursor w-100" />
+                </div>
+                <div className="banner">
+                  <img src={banner4} className="cursor w-100" />
+                </div>
+                {/* <div className="banner">
+                  <img src={banner5} className="cursor w-100" />
+                </div>
+                <div className="banner">
+                  <img src={banner6} className="cursor w-100" />
+                </div>
+                <div className="banner">
+                  <img src={banner7} className="cursor w-100" />
+                </div> */}
               </div>
             </div>
           </div>
