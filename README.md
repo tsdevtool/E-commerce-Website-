@@ -65,3 +65,8 @@ font awesome v4:https://fontawesome.com/v4/icons/ ->search arrow
 
 EX9:
 swipper slider react: https://swiperjs.com/react -> Resource->Demo->choose it which you like and choose react
+
+EX13: npm install react-inner-image-zoom
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.css';
+or:
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css';

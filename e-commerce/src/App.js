@@ -6,11 +6,13 @@ import "./App.css";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
+import ProductModal from "./Components/ProductModal";
 const MyContext = createContext();
 
 function App() {
   const [countryList, setCountryList] = useState([]);
   const [selectedCountry, setSelectedCountry] = useState("");
+  const [isOpenProductModal, setisOpenProductModal] = useState(false);
 
   useEffect(() => {
     getCountry("https://countriesnow.space/api/v0.1/countries/");
@@ -27,6 +29,8 @@ function App() {
     countryList,
     setSelectedCountry,
     selectedCountry,
+    isOpenProductModal,
+    setisOpenProductModal,
   };
 
   return (
@@ -37,6 +41,7 @@ function App() {
           <Route path="/" exact={true} element={<Home />} />
         </Routes>
         <Footer />
+        {isOpenProductModal === true && <ProductModal />}
       </MyContext.Provider>
     </BrowserRouter>
   );
