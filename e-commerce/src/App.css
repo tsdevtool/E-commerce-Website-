@@ -20,6 +20,23 @@ body{
   }
 }
 
+button{text-transform: capitalize !important;}
+
+.btn-blue{background: #233a95 !important; color: #fff !important; text-transform: capitalize;}
+.btn-lg{font-size: 15px !important; padding: 7px 30px !important;}
+.btn-round{border-radius: 30px !important;}
+.btn-sml{font-size: 12px; color: #000; text-transform: capitalize !important;}
+.btn-sml svg{font-size: 20px;}
+.badge{
+  display: inline-block;
+  padding: 7px 10px;
+
+}
+
+.badge.bg-success{
+  background: #e5f8ed !important;
+  color: #16b858 !important;
+}
 
 .cursor{
   cursor: pointer;
@@ -185,8 +202,8 @@ header .part3 .circle sgv{font-size: 22px;}
   background: #e2e2e2 !important;
 }
 
-.locationModal .close_{
-  position: absolute;
+.close_{
+  position: absolute !important;
   top: 10px;
   right: 10px;
   color: #000 !important;
@@ -196,7 +213,7 @@ header .part3 .circle sgv{font-size: 22px;}
   border-radius: 50%;
 }
 
-.locationModal .close_ svg{
+.close_ svg{
   font-size: 22px;
 }
 
@@ -394,7 +411,6 @@ nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu{
 /* Home Banner */
 .homeBannerSection{
   position: relative;
-  overflow: hidden; /* An cham tron o duoi*/
 }
 
 .homeBannerSection *{outline: none !important;}
@@ -536,17 +552,18 @@ nav .navPart1 .catWrapper .sidebarNav ul li:hover .submenu{
   color: #fff !important;
 }
 
-.productItem .info .oldPrice{
+.info .oldPrice{
   font-size: 16px;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.2);
   text-decoration: line-through;
 }
-
-.productItem .info .newPrice{
+.info .oldPrice.lg{font-size: 20px;}
+.info .newPrice{
   font-size: 16px;
   font-weight: bold;
 }
+.info .newPrice.lg{font-size: 20px;}
 
 .product_row .productItem{
   border-right: 1px solid transparent !important;
@@ -627,3 +644,28 @@ footer .copyright ul li a{display: flex; align-items: center; justify-content: c
 footer .copyright ul li a svg{font-size: 16px; color: rgba(0, 0, 0,0.8);}
 footer .copyright ul li a:hover{background: #2bbef9 !important;}
 footer .copyright ul li a:hover svg{color: #fff;}
+
+
+.productModal .MuiPaper-elevation{padding: 25px; position: relative; max-width: 900px !important; width: 900px !important;}
+.productModal  h4{font-size: 20px !important; color: rgba(0, 0, 0,0.8) !important;}
+
+.productZoom{width: 100%; height: auto; border: 0px solid rgba(0, 0, 0, 0.1); padding: 0px; overflow: hidden; border-radius: 15px;}
+.productZoom .badge{position: absolute; top: 20px; left: 20px; z-index: 100;}
+.zoomSliderBig{width: 100% !important; }
+.zoomSlider{padding-top: 30px;}
+.zoomSlider .slick-slide {padding-right: 20px !important;}
+.zoomSlider *{outline: none !important;}
+.zoomSlider .item{border: 2px solid transparent !important; overflow: hidden; border-radius: 15px; cursor: pointer;}
+.zoomSlider .slick-current .item{border: 2px solid #3bb77e !important;}
+.zoomSlider .slick-arrow{top: 55% !important; zoom: 80% !important;}
+.zoomSlider .slick-arrow.slick-next{right: -2% !important;}
+.zoomSlider .slick-arrow.slick-prev{right: -5% !important;}
+
+.quantityDrop{width: 150px; gap:10px;}
+.quantityDrop button{min-width: 40px !important; width: 40px; height: 40px !important; border-radius: 50% !important; background: #edeef5 !important; border: 1px solid rgba(0, 0, 0, 0.1) !important; color: #000;}
+.quantityDrop button svg{color: #000 !important ;}
+
+.quantityDrop input{width: 30px; border: 0px; background: transparent; outline: none !important;}
+
+.productModal .actions button{color: #000 !important;border: 1px solid rgba(0, 0, 0, 0.1) !important; font-size: 10px !important;}
+.productModal .actions button svg{font-size: 15px !important;}
